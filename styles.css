@@ -1,0 +1,183 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #00b4d8, #0077b6);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+/* Search Section */
+.searchContainer {
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 10px;
+}
+
+#city {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+#city:focus {
+    outline: none;
+    border-color: #0077b6;
+}
+
+#searchBtn {
+    padding: 12px 24px;
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#searchBtn:hover {
+    background-color: #023e8a;
+}
+
+/* Error Container */
+.errorContainer {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Weather Info Container */
+.weatherInfo {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.mainWeather {
+    margin: 1.5rem 0;
+}
+
+#temperature {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+}
+
+#description {
+    font-size: 1.2rem;
+    color: #666;
+    text-transform: capitalize;
+}
+
+.weatherDetails {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.5rem;
+    color: #555;
+}
+
+/* Search History */
+.searchHistoryList {
+    margin-top: 2rem;
+}
+
+.searchHistoryList h2 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+#searchHistory {
+    list-style: none;
+}
+
+#searchHistory li {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: #666;
+}
+
+footer a {
+    color: #0077b6;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Utility Classes */
+.hide {
+    display: none;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .searchContainer {
+        flex-direction: column;
+    }
+
+    #searchBtn {
+        width: 100%;
+    }
+
+    #temperature {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .weatherDetails {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

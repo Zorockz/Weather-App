@@ -3,11 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Hello World</h1>
+    <div class="container">
+        <header>
+            <h1>Weather App</h1>
+        </header>
+        
+        <section class="searchContainer">
+            <input type="text" id="city" placeholder="Enter city name">
+            <button id="searchBtn">Search</button>
+        </section>
+        
+        <section class="errorContainer hide" id="errorContainer">
+            <p id="errorMessage"></p>
+        </section>
+        
+        <section class="weatherInfo hide" id="weatherContainer">
+            <h2 id="cityName"></h2>
+            <div class="mainWeather">
+                <p id="temperature"></p>
+                <p id="description"></p>
+            </div>
+            <div class="weatherDetails">
+                <p id="humidity"></p>
+                <p id="windSpeed"></p>
+            </div>
+        </section>
+        
+        <section class="searchHistoryList">
+            <h2>Search History</h2>
+            <ul id="searchHistory"></ul>
+        </section>
+        
+        <footer>
+            <p>Powered by <a href="https://openweathermap.org/api" target="_blank">OpenWeather API</a></p>
+        </footer>
+    </div>
     
     <script src="script.js"></script>
 </body>
