@@ -1,4 +1,7 @@
-import config from './config.js';
+
+    
+    API_KEY: 'JDJR4FR8EKM2S4KL8TDC64QNQ' // I know this is not a good practice, but I am using it for educational purposes only.plus cards not on file
+
 // DOM Elements - These variables connect our JavaScript to the HTML elements
 const cityInput = document.getElementById('city');           // The text input where users type city names
 const searchBtn = document.getElementById('searchBtn');      // The search button
@@ -15,7 +18,7 @@ const searchHistoryList = document.getElementById('searchHistory');  // UL eleme
 
 
 // Use the API key in your fetch calls
-const API_KEY = config.API_KEY;
+const API_KEY = 'JDJR4FR8EKM2S4KL8TDC64QNQ';// dont have backend to hide it or card on file :)
 const API_URL = 'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/';
 
 // Search History Array - Stores previously searched cities
