@@ -1,3 +1,4 @@
+import config from './config.js';
 // DOM Elements - These variables connect our JavaScript to the HTML elements
 const cityInput = document.getElementById('city');           // The text input where users type city names
 const searchBtn = document.getElementById('searchBtn');      // The search button
@@ -11,8 +12,10 @@ const humidityElement = document.getElementById('humidity');         // Paragrap
 const windSpeedElement = document.getElementById('windSpeed');       // Paragraph for wind speed
 const searchHistoryList = document.getElementById('searchHistory');  // UL element for search history
 
-// API Configuration
-const API_KEY = 'JDJR4FR8EKM2S4KL8TDC64QNQ';  // Replace with your Visual Crossing API key
+
+
+// Use the API key in your fetch calls
+const API_KEY = config.API_KEY;
 const API_URL = 'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/';
 
 // Search History Array - Stores previously searched cities
